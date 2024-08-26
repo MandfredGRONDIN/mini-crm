@@ -1,0 +1,142 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  color: #333;
+}
+
+/* UserList styles */
+.user-list-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.user-list-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.user-list-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.user-list-link:hover {
+  background-color: #0056b3;
+}
+
+/* UserForm styles */
+.user-form-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-form-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.user-form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.user-form-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #007bff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.user-form-button:hover {
+  background-color: #0056b3;
+}
+
+.user-form-button.secondary {
+  background-color: #6c757d;
+}
+
+.user-form-button.secondary:hover {
+  background-color: #5a6268;
+}
+
+/* User styles */
+.user-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-item h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.user-item p {
+  margin: 5px 0;
+}
+
+.user-item button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.user-item button.edit {
+  background-color: #007bff;
+}
+
+.user-item button.edit:hover {
+  background-color: #0056b3;
+}
+
+.user-item button.delete {
+  background-color: #dc3545;
+}
+
+.user-item button.delete:hover {
+  background-color: #c82333;
+}
+
+/* Remove list bullets */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
