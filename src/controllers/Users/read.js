@@ -1,4 +1,5 @@
 import User from "../../models/UserSchema.js";
+import mongoose from 'mongoose';
 
 export const getUsers = async (req, res) => {
     try {
@@ -17,6 +18,9 @@ export const getUserById = async (req, res) => {
         }
         res.status(200).send(user);
     } catch (err) {
+        if (err instanceof mongoose.CastError) {
+            return res.status(404).send({ error: 'User not found' });
+        }
         res.status(500).send({ error: err.message });
     }
 };
