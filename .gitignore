@@ -1,0 +1,25 @@
+# Fichiers de configuration
+config.ini
+database.ini
+
+# Fichiers de dépendances
+/node_modules
+/vendor
+
+# Fichiers de build
+/build
+/dist
+
+# Fichiers de logs
+/logs
+
+# Fichiers de sauvegarde
+*.bak
+*.swp
+
+# Fichiers de cache
+/cache
+
+# Fichiers de données sensibles
+credentials.json
+secrets.txt
