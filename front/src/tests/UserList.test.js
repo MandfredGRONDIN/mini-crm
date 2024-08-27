@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, act } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import UserList from '../view/UserList';
 import { MemoryRouter } from 'react-router-dom';
@@ -14,12 +14,13 @@ describe('UserList Component', () => {
     });
 
     test('displays users after fetching', async () => {
-        const users = [{ _id: '1', name: 'John Doe' }, { _id: '2', name: 'Jane Doe' }];
+        const users = [
+            { _id: '1', firstname: 'John', lastname: 'Doe', email: 'john.doe@example.com', phone: '123-456-7890' },
+            { _id: '2', firstname: 'Jane', lastname: 'Doe', email: 'jane.doe@example.com', phone: '098-765-4321' }
+        ];
         axios.get.mockResolvedValueOnce({ data: users });
 
-        await act(async () => {
-            render(<UserList />, { wrapper: MemoryRouter });
-        });
+        render(<UserList />, { wrapper: MemoryRouter });
 
         expect(await screen.findByText('John Doe')).toBeInTheDocument();
         expect(await screen.findByText('Jane Doe')).toBeInTheDocument();
@@ -28,9 +29,7 @@ describe('UserList Component', () => {
     test('displays error message on fetch failure', async () => {
         axios.get.mockRejectedValueOnce(new Error('Network Error'));
 
-        await act(async () => {
-            render(<UserList />, { wrapper: MemoryRouter });
-        });
+        render(<UserList />, { wrapper: MemoryRouter });
 
         expect(await screen.findByText(/error/i)).toBeInTheDocument();
     });
