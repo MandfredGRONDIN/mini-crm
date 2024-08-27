@@ -6,7 +6,9 @@ const app = express();
 
 app.use(express.json());
 
-const mongoUrl = "mongodb://localhost:27017/crm";
+// const mongoUrl = "mongodb://localhost:27017/crm";
+// Conection to mongoDB with docker compose service name
+const mongoUrl = "mongodb://mongo:27017/crm";
 
 mongoose.connect(mongoUrl)
     .then(() => console.log('MongoDB connected'))
